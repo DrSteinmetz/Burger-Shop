@@ -1,0 +1,56 @@
+<resources>
+    <string-array name="mealSize">
+        <item>@string/small_meal</item>
+        <item>@string/regular_meal</item>
+        <item>@string/large_meal</item>
+        <item>@string/huge_meal</item>
+    </string-array>
+    <string name="app_name">Burger Shop</string>
+    <string name="koteret_str">Burger Shop</string>
+    <string name="mealSize_str">Choose burger size</string>
+    <string name="regular_meal">200 Grams ₪47</string>
+    <string name="large_meal">300 Grams  ₪58</string>
+    <string name="huge_meal">400 Grams  ₪67</string>
+    <string name="small_meal">100 Grams ₪34</string>
+    <string name="tomato_txt">Tomato</string>
+    <string name="cheese_txt">Cheese ₪7</string>
+    <string name="bacon_txt">Bacon  ₪9</string>
+    <string name="lettuce_txt">Lettuce</string>
+    <string name="toppings_txt">Choose toppings here</string>
+    <string name="yes_txt">Yes ₪16</string>
+    <string name="no_txt">No</string>
+    <string name="chips_side">Would you like</string>
+    <string name="chips_side2">fries on side?</string>
+    <string name="numMeals_str">How many more meals like this one would you like?</string>
+    <string name="choose_size">Choose Size…</string>
+    <string name="total_price">Total price 0 NIS</string>
+    <string name="total_price_part1">"Total price "</string>
+    <string name="nis">" NIS"</string>
+    <string name="none_selected">Select burger and pick up time to proceed</string>
+    <string name="success_dialog_msg">Order successful</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="toppings">Toppings</string>
+    <string name="friesExtra">Extras: Fries ₪16</string>
+    <string name="no_toppings">No toppings</string>
+    <string name="burger">Burger:</string>
+    <string name="here_is_your_order">Here Is Your Order</string>
+    <string name="coke">Coke ₪11</string>
+    <string name="sprite">Sprite ₪9</string>
+    <string name="lemonade">Lemonade ₪7</string>
+    <string name="soda">Soda ₪6</string>
+    <string name="water">Water ₪5</string>
+    <string name="drinks">Drinks</string>
+    <string name="no_drinks_selected">No drinks selected</string>
+    <string name="x">x</string>
+    <string name="insert_number_of_drinks">Insert number of drinks…</string>
+    <string name="click_to_select_drinks">Click to\nselect drinks</string>
+    <string name="select_time_for_pickup">Select time for pick up</string>
+    <string name="select">Select</string>
+    <string name="selected">Selected</string>
+    <string name="select_time_again_and_press_ok">Select time for pick up again and press OK</string>
+    <string name="time_not_selected">Select time for pick up to proceed</string>
+    <string name="burger_not_selected">Select burger size to proceed</string>
+    <string name="time_for_pick_up">"Time for pick up: "</string>
+    <string name="time_selected">"Time selected: "</string>
+</resources>
