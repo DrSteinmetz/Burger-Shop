@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:id="@+id/main_scroll_view"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+    <RelativeLayout
+        android:layout_height="match_parent"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:id="@+id/main_relative"
+        android:orientation="vertical"
+        >
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/matan_header"
+            android:id="@+id/koteret_linear"
+            />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/koteret_linear"
+            android:layout_centerHorizontal="true"
+            android:layout_alignStart="@id/meal_size_layot"
+            android:id="@+id/time_liniear_layout">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="@string/select_time_for_pickup"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:background="@drawable/my_textview_shape"
+            />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+
+                android:text="@string/select"
+                android:textAllCaps="false"
+                android:textSize="15sp"
+                android:textColor="@color/white"
+                android:background="@drawable/btn_selector"
+                android:id="@+id/time_btn"
+
+                />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/time_liniear_layout"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginStart="30dp"
+            android:gravity="center"
+            android:id="@+id/meal_size_layot"
+            >
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:text="@string/mealSize_str"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:background="@drawable/my_textview_shape"
+
+
+
+
+                />
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="3dp"
+                android:layout_marginStart="5dp"
+                android:layout_weight=".28"
+                android:background="@drawable/spinner_border"
+                android:orientation="horizontal">
+
+                <Spinner
+                    android:id="@+id/meal_spn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:background="@android:color/transparent"
+                    android:gravity="center"
+                    android:layout_marginStart="5dp"
+
+                    />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_expand_more_red_24dp" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/meal_size_layot"
+            android:layout_alignStart="@id/meal_size_layot"
+            android:visibility="gone"
+            android:id="@+id/relative_topping_layout">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:text="@string/toppings_txt"
+                android:background="@drawable/my_textview_shape"
+
+                android:textColor="@color/white"
+                android:layout_marginTop="30dp"
+
+
+                android:id="@+id/toppings_txt"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_arrow_downward_red_24dp"
+                android:layout_toEndOf="@id/toppings_txt"
+                android:layout_alignTop="@+id/toppings_txt"
+                android:layout_marginTop="5dp"/>
+
+            <CheckBox
+                android:theme="@style/checkbox"
+                style="@style/checkbox"
+                android:id="@+id/cheese_cb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/toppings_txt"
+                android:text="@string/cheese_txt"/>
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_toEndOf="@id/cheese_cb"
+                android:layout_marginEnd="26dp"
+                android:layout_alignTop="@+id/cheese_cb"
+                android:src="@drawable/ic_cheese"
+                android:layout_marginStart="5dp"
+                android:background="@null"
+                android:id="@+id/cheese_img"/>
+
+            <CheckBox
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:theme="@style/checkbox"
+                style="@style/checkbox"
+                android:id="@+id/bacon_cb"
+                android:text="@string/bacon_txt"
+                android:layout_marginTop="10dp"
+                android:layout_toEndOf="@id/cheese_img"
+                android:layout_alignBaseline="@id/cheese_cb"/>
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_toEndOf="@id/bacon_cb"
+                android:layout_marginStart="5dp"
+                android:layout_alignTop="@+id/bacon_cb"
+                android:src="@drawable/ic_bacon"
+                android:background="@null"
+                android:id="@+id/bacon_img"/>
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:theme="@style/checkbox"
+                android:layout_marginTop="25dp"
+                android:layout_marginStart="0.9dp"
+                style="@style/checkbox"
+                android:text="@string/tomato_txt"
+                android:id="@+id/tomato_cb"
+                android:layout_alignStart="@id/cheese_cb"
+                android:layout_below="@id/cheese_cb"/>
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_toEndOf="@id/tomato_cb"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="45dp"
+                android:layout_marginTop="2dp"
+                android:layout_alignBottom="@+id/tomato_cb"
+                android:src="@drawable/ic_tomato"
+                android:background="@null"
+                android:id="@+id/tomato_img"/>
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:theme="@style/checkbox"
+                style="@style/checkbox"
+                android:id="@+id/lettuce_cb"
+                android:layout_alignStart="@id/bacon_cb"
+                android:layout_alignBaseline="@id/tomato_cb"
+                android:text="@string/lettuce_txt"/>
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_toEndOf="@id/lettuce_cb"
+                android:layout_marginStart="1dp"
+                android:layout_alignBottom="@+id/lettuce_cb"
+                android:layout_marginTop="3dp"
+                android:src="@drawable/ic_lettuce"
+                android:background="@null"
+                android:id="@+id/lettuce_img"/>
+        </RelativeLayout>
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/chips_side"
+            android:layout_below="@id/relative_topping_layout"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_alignStart="@id/relative_topping_layout"
+            android:layout_marginTop="30dp"
+            android:id="@+id/fries_txt"
+            android:textColor="@color/white"
+            android:background="@drawable/my_textview_shape"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/chips_side2"
+            android:layout_below="@id/fries_txt"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginTop="0.1dp"
+            android:layout_alignStart="@id/fries_txt"
+
+            android:id="@+id/fries_txt2"
+            android:textColor="@color/white"
+            android:background="@drawable/my_textview_shape"/>
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/relative_topping_layout"
+            android:layout_toEndOf="@id/fries_txt"
+            android:layout_marginStart="10dp"
+            android:layout_alignTop="@id/fries_txt"
+            android:orientation="vertical"
+            android:id="@+id/radio_btns">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/yes_txt"
+                android:textSize="15sp"
+                android:textColor="@color/white"
+                android:id="@+id/radio_yes"
+                android:theme="@style/RadioButtonTheme"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/no_txt"
+                android:textSize="15sp"
+                android:textColor="@color/white"
+                android:theme="@style/RadioButtonTheme"
+                android:id="@+id/radio_no"/>
+
+        </RadioGroup>
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_chips"
+            android:layout_toEndOf="@+id/radio_btns"
+            android:layout_below="@id/relative_topping_layout"
+            android:layout_marginTop="27dp"
+            android:layout_marginStart="7dp"
+            android:layout_alignBottom="@+id/radio_btns"
+            android:background="@null"
+            android:id="@+id/chips_img"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:textSize="20sp"
+            android:layout_below="@+id/chips_img"
+            android:textColor="@color/white"
+            android:layout_marginTop="20dp"
+            android:textColorHint="@color/white"
+            android:background="@drawable/text_editor_shape"
+            android:inputType="number"
+            android:id="@+id/num_meals"
+            android:cursorVisible="true"
+            android:hint="@string/insert_number_of_drinks"
+            android:layout_marginStart="25dp"
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_marginStart="15dp"
+            android:layout_toEndOf="@+id/num_meals"
+            android:layout_alignTop="@id/num_meals"
+            android:text="@string/click_to_select_drinks"
+            android:textAllCaps="false"
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            android:background="@drawable/btn_selector"
+            android:id="@+id/sauces_btn"
+
+            />
+
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/sauces_btn"
+            android:scrollbarThumbHorizontal="@color/colorAccent"
+            android:id="@+id/scroll_bottom"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:visibility="gone"
+            android:background="@drawable/text_editor_shape"
+            >
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/linear_bags"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="5dp"
+                android:padding="5dp"
+                android:orientation="horizontal"
+                >
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="@string/none_selected"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:id="@+id/total_price"
+            android:layout_marginTop="20dp"
+
+
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/scroll_bottom"
+
+            android:background="@drawable/my_textview_shape"
+            />
+        <ImageButton
+            android:layout_width="235dp"
+            android:layout_height="100dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/total_price"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/submit_btn"
+            android:background="@drawable/order_selector"
+            android:enabled="false"
+
+
+
+            />
+
+    </RelativeLayout>
+</ScrollView>
+
