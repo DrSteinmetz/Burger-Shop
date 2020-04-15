@@ -1,7 +1,7 @@
 package com.example.burgershop;
+
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-import android.annotation.SuppressLint;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -163,7 +163,6 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
 
         //Dynamically adding radio buttons for drinks selection
         drinksButton.setOnClickListener(new View.OnClickListener() {
-            @SuppressLint("ResourceType")
             @Override
             public void onClick(View v) {
                 linearLayout.removeAllViews();
@@ -214,7 +213,7 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
                     radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
                         @Override
                         public void onCheckedChanged(RadioGroup group, int checkedId) {
-                            int index=group.getId()-11; // Group buttons id starts from 11
+                            int index=group.getId()-(11); // Group buttons id starts from 11
                             switch (checkedId) {
                                 case 1:
                                     drinksPrices[index]=11;
